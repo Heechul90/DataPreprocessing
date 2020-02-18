@@ -25,8 +25,9 @@ for img in glob(all_path):
     data = data / 255
     train.append(data)
 len(train)
-
-
+train[0].dtype
+a = train[0]
+b = train[1]
 filenames = os.listdir(path)
 filename = filenames[0]
 y = []
@@ -39,6 +40,11 @@ for filename in filenames:
         y.append(0)
 
 len(y)
+b = y[0]
+c = mx.nd.concatenate(a, axis = 0)
+c = mx.nd.concatenate([a, b], axis = 0)
+len(a)
+len(c)
 
 
 ######################################################################
