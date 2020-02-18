@@ -46,11 +46,20 @@ len(y_dog)
 y_cat = [0 for item in enumerate(dogs)]
 len(y_cat)
 
-### concatenete
-a = dogs[0]
-b = cats[0]
+### append
+# X
+X_train = dogs
 
 
-X_train = mx.nd.concatenate([dogs], [cats])
-X_train[0]
+for i in cats:
+    X_train.append(i)
 
+len(X_train)
+
+# y
+y_train = y_dog
+
+for i in y_cat:
+    y_train.append(i)
+
+len(y_train)
