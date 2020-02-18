@@ -50,7 +50,7 @@ len(y_cat)
 a = dogs[0]
 b = cats[0]
 
-X_train = np.concatenate((dogs, cats), axis=0)
+
 X_train = mx.nd.concatenate([dogs], [cats])
 X_train[0]
 
