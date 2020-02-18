@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae4abb7-4f4d-4c64-a37b-504842c24162" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageForCNN/DogsandCats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageForCNN/DogsandCats1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageForCNN/DogsandCats2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TimeseriesForCNN/상수도.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageForCNN/DogsandCats.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageForCNN/DogsandCats.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +18,12 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file pinned="false" current-in-tab="false">
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+            <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/../Mxnet/Study/Ch06/AlexNetWithMxnet.gluon.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="99">
-                    <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+                  <state relative-caret-position="330">
+                    <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
                     <folding>
                       <element signature="e#0#37#0" expanded="true" />
                     </folding>
@@ -29,11 +31,11 @@
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/../Mxnet_Learning/utils.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="495">
-                    <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+                  <state relative-caret-position="528">
+                    <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
                     <folding>
                       <element signature="e#0#20#0" expanded="true" />
                     </folding>
@@ -47,15 +49,41 @@
     </window>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+            <state relative-caret-position="1595">
+              <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
               <folding>
-                <element signature="e#13#31#0" expanded="true" />
+                <element signature="e#15#33#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="69" column="23" lean-forward="true" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+              <folding>
+                <element signature="e#15#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TimeseriesForCNN/상수도.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1947">
+              <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -75,7 +103,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats1.py" />
         <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats.py" />
+        <option value="$PROJECT_DIR$/TimeseriesForCNN/상수도.py" />
+        <option value="$PROJECT_DIR$/../Mxnet/Study/Ch06/AlexNetWithMxnet.gluon.py" />
+        <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats2.py" />
       </list>
     </option>
   </component>
@@ -90,6 +122,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -102,17 +135,26 @@
               <item name="DataPreprocessing" type="462c0819:PsiDirectoryNode" />
               <item name="ImageForCNN" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DataPreprocessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataPreprocessing" type="462c0819:PsiDirectoryNode" />
+              <item name="TimeseriesForCNN" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\HeechulFromGithub\DataPreprocessing\ImageForCNN" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -137,19 +179,23 @@
       <option name="presentableId" value="Default" />
       <updated>1581984190519</updated>
     </task>
+    <task id="LOCAL-00001" summary="Image data for preprocessing for CNN">
+      <created>1581988734100</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581988734100</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Python Console" visible="true" weight="0.27616927" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -157,10 +203,18 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.40089086" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Image data for preprocessing for CNN" />
+    <option name="LAST_COMMIT_MESSAGE" value="Image data for preprocessing for CNN" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Mxnet/DogsAndCats/전처리.py">
@@ -170,20 +224,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Mxnet/Study/Ch06/AlexNetWithMxnet.gluon.py">
+    <entry file="file://C:/ProgramData/Anaconda3/envs/mxnet/Lib/site-packages/mxnet/gluon/data/vision/transforms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-18172" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1947">
+          <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TimeseriesForCNN/상수도.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/../Mxnet_Learning/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+        <state relative-caret-position="528">
+          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -192,10 +251,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+        <state relative-caret-position="1595">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
           <folding>
-            <element signature="e#13#31#0" expanded="true" />
+            <element signature="e#15#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Mxnet_Learning/alexnet-gluon/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="69" column="23" lean-forward="true" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+          <folding>
+            <element signature="e#15#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Mxnet/Study/Ch06/AlexNetWithMxnet.gluon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

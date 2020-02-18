@@ -19,10 +19,10 @@ dog_path = os.path.join(path, 'dog.*')
 
 dogs = []
 for dog_img in glob(dog_path):
-    dog = mx.image.imread(dog_img)
-    dog = mx.image.imresize(dog, ROW, COL)
-    dog = mx.nd.transpose(dog, (2, 0, 1))
-    dog = dog.astype(np.float32)
+    dog = cv2.imread(dog_img)
+    dog = cv2.cvtColor(dog, cv2.COLOR_BGR2GRAY)
+    dog = cv2.resize(dog, (ROW, COL))
+    dog = image.img_to_array(dog)
     dogs.append(dog)
 len(dogs)
 
@@ -32,10 +32,10 @@ cat_path = os.path.join(path, 'cat.*')
 
 cats = []
 for cat_img in glob(cat_path):
-    cat = mx.image.imread(cat_img)
-    cat = mx.image.imresize(cat, ROW, COL)
-    cat = mx.nd.transpose(cat, (2, 0, 1))
-    cat = cat.astype(np.float32)
+    cat = cv2.imread(cat_img)
+    cat = cv2.cvtColor(cat, cv2.COLOR_BGR2GRAY)
+    cat = cv2.resize(cat, (ROW, COL))
+    cat = image.img_to_array(cat)
     cats.append(cat)
 len(cats)
 
@@ -52,7 +52,17 @@ len(y_dog)
 y_cat = [0 for item in enumerate(dogs)]
 len(y_cat)
 
+## converting everything to Numpy array to fit in our model
+## them creating a X and target file like we used to see
+## in Machine and Deep Learning models
+dogs = np.asarray(dogs).astype('float32')
+cats = np.asarray(cats).astype('float32')
+y_dog = np.asarray(y_dog).astype('int32')
+y_cat = np.asarray(y_cat).astype('int32')
+
+### 값을 0과 1 사이의 값으로 바꾸기
+dogs = dogs / 255
 
 ### concatenete
-X_train = mx.nd.concat(dogs, cats, dim = 1)
+X_train = np.concatenate((dogs, cats), axis = 0)
 X_train[0]
