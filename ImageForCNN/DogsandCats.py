@@ -23,8 +23,7 @@ for dog_img in glob(dog_path):
     dog = mx.image.imresize(dog, ROW, COL)
     dog = mx.nd.transpose(dog.astype('float32'), (2, 0, 1)) / 255
     dogs.append(dog)
-len(dogs)
-dogs[0]
+
 
 
 # cat
@@ -36,11 +35,6 @@ for cat_img in glob(cat_path):
     cat = mx.image.imresize(cat, ROW, COL)
     cat = mx.nd.transpose(cat.astype('float32'), (2, 0, 1)) / 255
     cats.append(cat)
-len(cats)
-cats[0]
-
-### 사진 확인하기
-
 
 
 ### 라벨마들기
@@ -52,11 +46,11 @@ len(y_dog)
 y_cat = [0 for item in enumerate(dogs)]
 len(y_cat)
 
-a = dogs[0:10]
-b = cats[0]
-mx.nd.concatenate([a, b]).shape
 ### concatenete
-X_train = mx.nd.concatenate([dogs, cats])
+a = dogs[0]
+b = cats[0]
+
+X_train = np.concatenate((dogs, cats), axis=0)
+X_train = mx.nd.concatenate([dogs], [cats])
 X_train[0]
 
-a = np.asarray(a).astype('float32')
