@@ -15,15 +15,20 @@ def transformer(data, label):
 
 batch_size = 64
 train_data = gluon.data.DataLoader(
-    gluon.data.vision.datasets('D:\HeechulFromGithub\dataset\dogs-vs-cats\train', train = True, transform = transformer),
+    gluon.data.vision.CIFAR10('./data', train = True, transform = transformer),
     batch_size = batch_size, shuffle = False, last_batch = 'discard')
 
 test_data = gluon.data.DataLoader(
     gluon.data.vision.CIFAR10('./data', train = False, transform = transformer),
     batch_size = batch_size, shuffle = True, last_batch = 'discard')
 
+from glob import glob
+glob(train_data)
+
 
 for d, l in train_data:
     break
 
 print(d.shape, l.shape)
+len(d)
+len(l)

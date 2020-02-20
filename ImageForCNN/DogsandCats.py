@@ -70,14 +70,25 @@ for i in y_cat:
     y_train.append(i)
 
 len(y_train)
+
+dogs[0:2]
 a = X_train[0:10]
 b = y_train[0:10]
 type(a)
 type(b)
 
-df = pd.DataFrame(a)
-a.extend(b)
-len(a)
+df = pd.DataFrame({'Image': a,
+                   'DogCat': b})
+df[0]
+len(df)
+
+df.to_csv('dataset/trainset.csv',
+          sep = ',')
+
+data_set = pd.read_csv('dataset/trainset.csv', index_col=0)
+data_set
+d = data_set.values
+d[0]
 ### concatenate
 len(mx.nd.concatenate([a, b], axis=1))
 
