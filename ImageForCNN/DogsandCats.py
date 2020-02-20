@@ -7,7 +7,7 @@ import gluoncv
 import mxnet as mx
 
 from glob import glob
-from keras.preprocessing import image
+
 
 ##############################################################################
 ### 사이즈, 경로 설정
@@ -15,17 +15,20 @@ ROW, COL = 224, 224
 path = 'D:/HeechulFromGithub/dataset/dogs-vs-cats/train/'
 
 ### 훈련용 이미지 데이터 조정
+
+# os모듈은 환경 변수나 디텍토리, 파일등의 OS 자원을 제어할 수 있게 해주는 모듈
 # dog
 dog_path = os.path.join(path, 'dog.*')
 
+# glob - 디렉토리 안에 있는 파일들을 리스트로 만들어주는 모듈
 dogs = []
 for dog_img in glob(dog_path):
     dog = mx.image.imread(dog_img)
     dog = mx.image.imresize(dog, ROW, COL)
     dog = mx.nd.transpose(dog.astype('float32'), (2, 0, 1)) / 255
     dogs.append(dog)
-
-
+len(dogs)
+dogs[0].shape
 
 # cat
 cat_path = os.path.join(path, 'cat.*')
@@ -36,9 +39,12 @@ for cat_img in glob(cat_path):
     cat = mx.image.imresize(cat, ROW, COL)
     cat = mx.nd.transpose(cat.astype('float32'), (2, 0, 1)) / 255
     cats.append(cat)
+len(cats)
+cats[0].shape
 
 
 ### 라벨마들기
+# enumerate - 반복문 사용시 인덱스 번호와 컬렉션의 원소를 tuple형태로 반환
 # dog=1
 y_dog = [1 for item in enumerate(dogs)]
 len(y_dog)
@@ -64,6 +70,19 @@ for i in y_cat:
     y_train.append(i)
 
 len(y_train)
+a = X_train[0:10]
+b = y_train[0:10]
+type(a)
+type(b)
+
+df = pd.DataFrame(a)
+a.extend(b)
+len(a)
+### concatenate
+len(mx.nd.concatenate([a, b], axis=1))
+
+
+
 ##############################################################################
 X_train
 y_train

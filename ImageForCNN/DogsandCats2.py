@@ -7,7 +7,7 @@ import gluoncv
 import mxnet as mx
 
 from glob import glob
-from keras.preprocessing import image
+
 
 ### 사이즈, 경로 설정
 ROW, COL = 224, 224
