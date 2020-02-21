@@ -11,33 +11,33 @@ from glob import glob
 
 ##############################################################################
 ### 사이즈, 경로 설정
-ROW, COL = 224, 224
-path = 'D:/HeechulFromGithub/dataset/dogs-vs-cats/train/'
+ROW, COL = 96, 96
+path = 'D:/HeechulFromGithub/dataset/dogs-vs-cats2/training_set/'
 
 ### 훈련용 이미지 데이터 조정
 
 # os모듈은 환경 변수나 디텍토리, 파일등의 OS 자원을 제어할 수 있게 해주는 모듈
 # dog
-dog_path = os.path.join(path, 'dog.*')
+dog_path = os.path.join(path, 'dogs/dog.*')
 
 # glob - 디렉토리 안에 있는 파일들을 리스트로 만들어주는 모듈
 dogs = []
 for dog_img in glob(dog_path):
     dog = mx.image.imread(dog_img)
     dog = mx.image.imresize(dog, ROW, COL)
-    dog = mx.nd.transpose(dog.astype('float32'), (2, 0, 1)) / 255
+    dog = mx.nd.transpose(dog.astype('float32'), (2, 0, 1))
     dogs.append(dog)
 len(dogs)
 dogs[0].shape
 
 # cat
-cat_path = os.path.join(path, 'cat.*')
+cat_path = os.path.join(path, 'cats/cat.*')
 
 cats = []
 for cat_img in glob(cat_path):
     cat = mx.image.imread(cat_img)
     cat = mx.image.imresize(cat, ROW, COL)
-    cat = mx.nd.transpose(cat.astype('float32'), (2, 0, 1)) / 255
+    cat = mx.nd.transpose(cat.astype('float32'), (2, 0, 1))
     cats.append(cat)
 len(cats)
 cats[0].shape
@@ -50,8 +50,21 @@ y_dog = [1 for item in enumerate(dogs)]
 len(y_dog)
 
 # cat=0
-y_cat = [0 for item in enumerate(dogs)]
+y_cat = [0 for item in enumerate(cats)]
 len(y_cat)
+
+##########################################################
+# 리스트의 형태를 ndarray로 바꿔줌
+dogs = mx.nd.array(dogs)
+cats = mx.nd.array(cats)
+
+y_dog = mx.nd.array(y_dog)
+y_cat = mx.nd.array(y_cat)
+
+
+### concatenate
+X_train =  mx.nd.concatenate([dogs, cats], axis=0)
+
 
 ### append
 # X
