@@ -2,5 +2,22 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/dlpack" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/dmlc-core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/googletest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/mkldnn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/nvidia_cub" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/onnx-tensorrt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/onnx-tensorrt/third_party/onnx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/onnx-tensorrt/third_party/onnx/third_party/benchmark" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/onnx-tensorrt/third_party/onnx/third_party/pybind11" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/onnx-tensorrt/third_party/onnx/third_party/pybind11/tools/clang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/openmp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/ps-lite" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/tvm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/tvm/3rdparty/dlpack" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/tvm/3rdparty/dmlc-core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mxnet/3rdparty/tvm/3rdparty/rang" vcs="Git" />
   </component>
 </project>

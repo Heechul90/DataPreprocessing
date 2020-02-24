@@ -25,7 +25,7 @@ dogs = []
 for dog_img in glob(dog_path):
     dog = mx.image.imread(dog_img)
     dog = mx.image.imresize(dog, ROW, COL)
-    dog = mx.nd.transpose(dog.astype('float32'), (2, 0, 1))
+    dog = mx.nd.transpose(dog, (2, 0, 1))
     dogs.append(dog)
 len(dogs)
 dogs[0].shape
@@ -38,6 +38,7 @@ for cat_img in glob(cat_path):
     cat = mx.image.imread(cat_img)
     cat = mx.image.imresize(cat, ROW, COL)
     cat = mx.nd.transpose(cat.astype('float32'), (2, 0, 1))
+    cat = cat.asnumpy()
     cats.append(cat)
 len(cats)
 cats[0].shape
@@ -55,15 +56,21 @@ len(y_cat)
 
 ##########################################################
 # 리스트의 형태를 ndarray로 바꿔줌
-dogs = mx.nd.array(dogs)
-cats = mx.nd.array(cats)
+type(dogs)
+dogs = np.asarray(dogs).astype('float32')
+cats = np.asarray(cats).astype('float32')
 
 y_dog = mx.nd.array(y_dog)
 y_cat = mx.nd.array(y_cat)
 
 
 ### concatenate
-X_train =  mx.nd.concatenate([dogs, cats], axis=0)
+X_train =  np.concatenate((dogs, cats), axis=0)
+len(X_train)
+X_train[0]
+
+for i in X_train:
+    mx.nd.array(i)
 
 
 ### append
