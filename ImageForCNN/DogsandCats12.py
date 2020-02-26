@@ -1,68 +1,3 @@
-### 함수 및 라이브러리
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import os, cv2, random
-import gluoncv
-import mxnet as mx
-
-from glob import glob
-
-
-### 사이즈, 경로 설정
-ROW, COL = 224, 224
-path = 'D:/HeechulFromGithub/dataset/dogs-vs-cats/train1/'
-
-### 훈련용 이미지 데이터 조정
-# dog
-all_path = os.path.join(path, 'dog.*')
-
-dogs = []
-for img in glob(all_path):
-    data = mx.image.imread(img)
-    data = mx.image.imresize(data, ROW, COL)
-    data = mx.nd.transpose(data.astype('float32'), (2, 0, 1)) / 255
-    data = mx.nd.array(data)
-    dogs.append(data)
-len(dogs)
-
-# cat
-all_path = os.path.join(path, 'cat.*')
-
-cats = []
-for img in glob(all_path):
-    data = mx.image.imread(img)
-    data = mx.image.imresize(data, ROW, COL)
-    data = mx.nd.transpose(data.astype('float32'), (2, 0, 1))
-    data = data / 255
-    cats.append(data)
-len(cats)
-
-# label
-# dog=1
-y_dog = [1 for item in enumerate(dogs)]
-len(y_dog)
-
-# cat=0
-y_cat = [0 for item in enumerate(dogs)]
-len(y_cat)
-dogs[0]
-# convert NDArray
-dogs = mx.nd.array(dogs)
-cats = mx.nd.array(cats)
-y_dog = mx.nd.array(y_dog).astype('int32')
-y_cat = mx.nd.array(y_cat).astype('int32')
-
-
-
-X = mx.nd.concatenate([dogs[0], cats[0]], axis = 0)
-y = mx.nd.concatenate([y_dog, y_cat], axis = 0)
-train = mx.nd.concatenate([X, y], axis = 1)
-len(X)
-len(y)
-
-
-######################################################################
 from __future__ import print_function
 import mxnet as mx
 from mxnet import nd, autograd
@@ -72,8 +7,22 @@ mx.random.seed(1)
 
 ctx = mx.cpu()
 
+def transformer(data, label):
+    data = mx.image.imresize(data, 224, 224)
+    data = mx.nd.transpose(data, (2, 0, 1))
+    data = data.astype(np.float32)
+    return data, label
+
+batch_size = 64
+train_data = gluon.data.DataLoader('./imageDataList_25.npy',
+    batch_size = batch_size, shuffle = False, last_batch = 'discard')
+
+test_data = gluon.data.DataLoader('./imageDataList_25.npy',
+    batch_size = batch_size, shuffle = True, last_batch = 'discard')
 
 
+
+#####################################################################
 net = gluon.nn.Sequential()
         # 은닉층1 (채널=96, 커널=11, 패딩=1, 스트라이드=4, 활성화함수=relu)
         # maxpooling(사이즈=3, 스트라이드2)
@@ -127,31 +76,6 @@ trainer = gluon.Trainer(net.collect_params(), 'sgd', {'learning_rate': .11})
 # 오차 함수
 softmax_cross_entropy = gluon.loss.SoftmaxCrossEntropyLoss()
 
-
-#################################################################################
-def transformer(data, label):
-    data = mx.image.imresize(data, 224, 224)
-    data = mx.nd.transpose(data, (2, 0, 1))
-    data = data.astype(np.float32)
-    return data, label
-
-batch_size = 64
-train_data = gluon.data.DataLoader(
-    gluon.data.vision.CIFAR10('./data', train = True, transform = transformer),
-    batch_size = batch_size, shuffle = False, last_batch = 'discard')
-
-test_data = gluon.data.DataLoader(
-    gluon.data.vision.CIFAR10('./data', train = False, transform = transformer),
-    batch_size = batch_size, shuffle = True, last_batch = 'discard')
-
-for d, l in train_data:
-    break
-
-print(d.shape, l.shape)
-#################################################################################
-
-
-
 def evaluate_accuracy(data_iterator, net):
     acc = mx.metric.Accuracy()
     for d, l in data_iterator:
@@ -170,9 +94,7 @@ epochs = 1
 smoothing_constant = 0.01
 
 for e in range(epochs):
-    d = X
-    l = y
-    for i in len(X):
+    for i, (d, l) in enumerate(train_data):
         data = d.as_in_context(ctx)
         label = l.as_in_context(ctx)
         with autograd.record():
@@ -188,8 +110,6 @@ for e in range(epochs):
         curr_loss = nd.mean(loss).asscalar()
         moving_loss = (curr_loss if ((i == 0) and (e == 0)) else (1 - smoothing_constant) * moving_loss + (smoothing_constant) * curr_loss)
 
-    # test_accuracy = evaluate_accuracy(test_data, net)
-    # train_accuracy = evaluate_accuracy(train_data, net)
-    # print("Epoch %s. Loss: %s, Train_acc %s, Test_acc %s" % (e, moving_loss, train_accuracy, test_accuracy))
-    print("Epoch %s. Loss: %s, Train_acc %s, Test_acc %s" % (e, moving_loss))
-
+    test_accuracy = evaluate_accuracy(test_data, net)
+    train_accuracy = evaluate_accuracy(train_data, net)
+    print("Epoch %s. Loss: %s, Train_acc %s, Test_acc %s" % (e, moving_loss, train_accuracy, test_accuracy))
