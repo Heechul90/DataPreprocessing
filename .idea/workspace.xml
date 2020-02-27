@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae4abb7-4f4d-4c64-a37b-504842c24162" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ImageForCNN/1111.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageForCNN/2222.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageForCNN/DogsandCats12.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageForCNN/DogsandCats9.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageForCNN/333.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageForCNN/DogsandCats2.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageForCNN/DogsandCats2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageForCNN/asd.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageForCNN/asd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageForCNN/DogsandCats12.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageForCNN/DogsandCats12.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,57 +15,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats2.py">
+        <entry file="file://$PROJECT_DIR$/examples_classification_python/transfer_learning_minc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2277">
-              <caret line="76" selection-start-line="76" selection-end-line="193" selection-end-column="77" />
+            <state relative-caret-position="7656">
+              <caret line="233" column="1" selection-start-line="224" selection-end-line="233" selection-end-column="1" />
               <folding>
-                <element signature="e#15#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="22" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ImageForCNN/asd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats12.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Mxnet/Study/Ch06/AlexNetWithMxnet.gluon.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="32" selection-start-line="32" selection-end-line="121" selection-end-column="108" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#2325#2343#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,8 +29,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats11.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="101" selection-start-line="101" selection-end-line="106" selection-end-column="12" />
+            <state>
+              <caret selection-end-line="112" />
+              <folding>
+                <element signature="e#29#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats12.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="148" column="15" lean-forward="true" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
               <folding>
                 <element signature="e#29#47#0" expanded="true" />
               </folding>
@@ -88,25 +51,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ImageForCNN/1111.py">
+        <entry file="file://$PROJECT_DIR$/../Mxnet_Learning/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1518">
-              <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+            <state relative-caret-position="578">
+              <caret line="71" column="48" lean-forward="true" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ImageForCNN/2222.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Mxnet/Study/Ch06/AlexNetWithMxnet.gluon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1006">
-              <caret line="216" column="36" selection-start-line="216" selection-start-column="36" selection-end-line="216" selection-end-column="36" />
+            <state relative-caret-position="726">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding>
-                <element signature="e#29#47#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Mxnet_Learning/densenet-gluon/Learning/DenseNetLearning02.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -145,12 +117,14 @@
         <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats1.py" />
         <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats9.py" />
         <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats2.py" />
-        <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats12.py" />
         <option value="$PROJECT_DIR$/ImageForCNN/asd.py" />
-        <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats11.py" />
         <option value="$PROJECT_DIR$/../Mxnet/Study/Ch06/AlexNetWithMxnet.gluon.py" />
         <option value="$PROJECT_DIR$/ImageForCNN/1111.py" />
         <option value="$PROJECT_DIR$/ImageForCNN/2222.py" />
+        <option value="$PROJECT_DIR$/ImageForCNN/333.py" />
+        <option value="$PROJECT_DIR$/examples_classification_python/demo_cifar10.py" />
+        <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats11.py" />
+        <option value="$PROJECT_DIR$/ImageForCNN/DogsandCats12.py" />
       </list>
     </option>
   </component>
@@ -187,7 +161,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ImageForCNN" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -254,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582182803534</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Image data for preprocessing for CNN">
+      <created>1582689883805</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582689883805</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -274,7 +255,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.24498886" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.32182628" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.29287305" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -314,16 +295,6 @@
     <entry file="file://C:/ProgramData/Anaconda3/envs/mxnet/Lib/site-packages/mxnet/gluon/data/vision/datasets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4785" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Mxnet_Learning/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="66" column="45" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../DataPreprocessing(keras)/ImageForCNN/DogsandCats.py">
@@ -446,24 +417,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ImageForCNN/asd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
+        <state relative-caret-position="478">
           <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats12.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ImageForCNN/1111.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
+        <state relative-caret-position="325">
           <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -471,10 +432,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ImageForCNN/2222.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="189" column="10" selection-start-line="189" selection-start-column="10" selection-end-line="189" selection-end-column="10" />
+          <folding>
+            <element signature="e#29#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageForCNN/333.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples_classification_python/demo_cifar10.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="79" column="35" lean-forward="true" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+          <folding>
+            <element signature="e#895#926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples_classification_python/dive_deep_cifar10.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5544">
+          <caret line="72" column="43" lean-forward="true" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+          <folding>
+            <element signature="e#1474#1505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples_classification_python/demo_imagenet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1733" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples_classification_python/dive_deep_imagenet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples_classification_python/transfer_learning_minc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7656">
+          <caret line="233" column="1" selection-start-line="224" selection-end-line="233" selection-end-column="1" />
+          <folding>
+            <element signature="e#2325#2343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats11.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="101" selection-start-line="101" selection-end-line="106" selection-end-column="12" />
+        <state>
+          <caret selection-end-line="112" />
           <folding>
             <element signature="e#29#47#0" expanded="true" />
           </folding>
@@ -483,18 +504,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Mxnet/Study/Ch06/AlexNetWithMxnet.gluon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" selection-start-line="32" selection-end-line="121" selection-end-column="108" />
+        <state relative-caret-position="726">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ImageForCNN/2222.py">
+    <entry file="file://$PROJECT_DIR$/../Mxnet_Learning/densenet-gluon/Learning/DenseNetLearning02.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1006">
-          <caret line="216" column="36" selection-start-line="216" selection-start-column="36" selection-end-line="216" selection-end-column="36" />
+        <state relative-caret-position="726">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/mxnet/Lib/site-packages/mxnet/gluon/data/dataloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18579">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Mxnet_Learning/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="71" column="48" lean-forward="true" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageForCNN/DogsandCats12.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="148" column="15" lean-forward="true" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
           <folding>
             <element signature="e#29#47#0" expanded="true" />
           </folding>
