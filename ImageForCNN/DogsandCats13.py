@@ -9,25 +9,20 @@ import gluoncv
 import mxnet as mx
 
 
+from mxnet.gluon import nn
 from mxnet import nd, autograd
 from mxnet import gluon
 
 
 ctx = mx.cpu()
-##########################################################
+########################################################################################################################
 ### seed값 설정
-# seed 값은 random 함수에서 랜덤 값을 계산할 때 사용하며 매 번 바뀝니다.
-# 초기 seed 값을 설정하지 않으면 랜덤 값을 생성하는 순서가 매 번 달라집니다.
-# seed = 0
-# np.random.seed(seed)
-# tf.set_random_seed(seed)
 
-##########################################################
+
+########################################################################################################################
 ### dataset 경로 및 사이즈
-
-
-train_path = './minc-2500-tiny/train'
-test_path = './minc-2500-tiny/val'
+train_path = '../dataset/dogs-vs-cats2/train'
+test_path = '../dataset/dogs-vs-cats2/test'
 
 def transformer(data, label):
     data = mx.image.imresize(data, 224, 224)
@@ -58,32 +53,50 @@ print(d.shape, l.shape)
 for da, la in test_data:
     break
 print(da.shape, la.shape)
-
-
-
-
+########################################################################################################################
+### graph
 # from gluoncv.utils import viz
 # viz.plot_image(d[2][1])  # index 0 is image, 1 is label
 # viz.plot_image(d[4567][0])
-##########################################################
-from mxnet.gluon.model_zoo import vision
 
-net = vision.alexnet()
-####################################################################
+########################################################################################################################
+### model
+net = nn.HybridSequential()
+with net.name_scope():
+    net.add(
+        #
+        nn.Conv2D(channels=96, kernel_size=11, strides=4, activation='relu'),
+        nn.MaxPool2D(pool_size=3, strides=2),
+        #
+        nn.Conv2D(channels=256, kernel_size=5, padding=2, activation='relu'),
+        nn.MaxPool2D(pool_size=3, strides=2),
+        #
+        nn.Conv2D(channels=384, kernel_size=3, padding=1, activation='relu'),
+        nn.Conv2D(channels=384, kernel_size=3, padding=1, activation='relu'),
+        nn.Conv2D(channels=256, kernel_size=3, padding=1, activation='relu'),
+        nn.MaxPool2D(pool_size=3, strides=2),
+        #
+        nn.Flatten(),
+        nn.Dense(4096, activation="relu"),
+        nn.Dropout(.5),
+        #
+        nn.Dense(4096, activation="relu"),
+        nn.Dropout(.5),
+        #
+        nn.Dense(1, activation='sigmoid'))
+########################################################################################################################
+### train
 
+net.collect_params().initialize(mx.init.Normal(), ctx = ctx)      # sigma=0.01
+net.collect_params().initialize(mx.init.Xavier(), ctx = ctx)      # rnd_type='uniform', factor_type='avg', magnitude=3
+net.collect_params().initialize(mx.init.Orthogonal(), ctx = ctx)  # scale=1.414, rand_type='uniform'
 
+trainer = gluon.Trainer(net.collect_params(), 'sgd', {'learning_rate': .01})
 
-
-
-
-# train
-
-net.collect_params().initialize(mx.init.Xavier(magnitude = 0), ctx = ctx)
-
-trainer = gluon.Trainer(net.collect_params(), 'sgd', {'learning_rate': .11})
 # 오차 함수
-softmax_cross_entropy = gluon.loss.SoftmaxCrossEntropyLoss()
+sigmoidbinary = gluon.loss.SoftmaxCrossEntropyLoss()
 
+# accuracy
 def evaluate_accuracy(data_iterator, net):
     acc = mx.metric.Accuracy()
     for d, l in data_iterator:
@@ -107,7 +120,7 @@ for e in range(epochs):
         label = l.as_in_context(ctx)
         with autograd.record():
             output = net(data)
-            loss = softmax_cross_entropy(output, label)
+            loss = sigmoidbinary(output, label)
         loss.backward()
         trainer.step(data.shape[0])
 
