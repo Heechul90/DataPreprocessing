@@ -112,9 +112,19 @@ len(X_test)
 len(Y_train)
 len(Y_test)
 
-train_data = mx.io.NDArrayIter(data=X_train, label=Y_train)
+X_train = mx.nd.array(X_train)
+X_test = mx.nd.array(X_test)
+Y_train = mx.nd.array(Y_train)
+Y_test = mx.nd.array(Y_test)
 
-test_data = mx.io.NDArrayIter(data=X_test, label=Y_test)
+batch_size = 14
+
+train_data = mx.io.NDArrayIter(data=X_train, label=Y_train, batch_size=batch_size, shuffle=False)
+test_data = mx.io.NDArrayIter(data=X_test, label=Y_test, batch_size=batch_size, shuffle=False)
+
+for d, l in train_data:
+    break
+d[0]
 
 
 def transform_mnist(data, label):

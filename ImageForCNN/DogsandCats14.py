@@ -55,9 +55,9 @@ for da, la in test_data:
 print(da.shape, la.shape)
 ########################################################################################################################
 ### graph
-from gluoncv.utils import viz
-viz.plot_image(d[2][1])  # index 0 is image, 1 is label
-viz.plot_image(d[1][0])
+# from gluoncv.utils import viz
+# viz.plot_image(d[2][1])  # index 0 is image, 1 is label
+# viz.plot_image(d[4567][0])
 
 ########################################################################################################################
 ### model
