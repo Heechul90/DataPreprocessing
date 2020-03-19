@@ -21,7 +21,7 @@ ctx = mx.cpu()
 
 ########################################################################################################################
 ### dataset 경로 및 사이즈
-train_path = '../dataset/dogs-vs-cats2/train'
+train_path = './dataset/dogs-vs-cats'
 test_path = '../dataset/dogs-vs-cats2/test'
 
 def transformer(data, label):
@@ -35,7 +35,7 @@ def transformer(data, label):
 #     data = data.astype(np.float32)
 #     return data, label
 
-batch_size = 64
+batch_size = 10
 train_data = gluon.data.DataLoader(
     gluon.data.vision.datasets.ImageFolderDataset(train_path, transform = transformer),
     batch_size = batch_size, shuffle = True, last_batch = 'discard')
